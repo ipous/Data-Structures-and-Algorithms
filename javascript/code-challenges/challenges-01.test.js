@@ -47,6 +47,7 @@ const allUpperCase = (arr) => {
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
+
 Write a function named `greeting` that takes in a single string and returns the string in all uppercase letters, and followed by an "!".
 Then, write a function named `speaker` that takes in an array of strings and a callback function. 
 Use `forEach` to build a new array of strings, each string modified by the callback. Return the new array. 
@@ -71,12 +72,13 @@ Then, write a function named addNumbers that takes in four arguments:
   - An array into which the number should be added
   - The number of times the number should be added
   - A callback function to use to add the numbers to the array (Hint: you already defined it)
+
 Within the addNumbers function, invoke the callback function as many times as necessary, based on the third argument of the addNumbers function.
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
   arr.push(value);
-  };
+  
   
   const addNumbers = (num, arr, times, callback) => {
     for (let i=0; i < times; i++) {
@@ -87,7 +89,9 @@ Return the modified array.
     addNumbers(8, [], 5, addValues)
 
 /* ------------------------------------------------------------------------------------------------
+
 CHALLENGE 6
+
 Write a function named createList that takes in an array of the current store intentory.
 The inventory is formatted like this:
 [
@@ -97,6 +101,7 @@ The inventory is formatted like this:
   { name: 'bananas', available: true },
   { name: 'blueberries', available: false }
 ]
+
 This function should use forEach to populate your grocery list based on the store's inventory. If the item is available, add it to your list. Return the final list.
 ------------------------------------------------------------------------------------------------ */
 
@@ -106,11 +111,10 @@ This function should use forEach to populate your grocery list based on the stor
      if (item.available === true){
        newArray.push(item.name);
      }
-   
+      return newArray;
     });
-   return newArray;
-    };
-
+   
+    
 
 /* ------------------------------------------------------------------------------------------------
 STRETCH - CHALLENGE 7
