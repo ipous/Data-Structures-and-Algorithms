@@ -53,7 +53,8 @@ let characters = [
 ];
 
 const sortByChildren = (charArray) => {
-  // Solution code here...
+  let regex = /0-10/g;
+  return regex.test(charArray);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,7 +65,8 @@ Write a function named containsW that takes in a string. This function should us
 ------------------------------------------------------------------------------------------------ */
 
 const containsW = (str) => {
-  // Solution code here...
+  let regex = /w/g;
+  return regex.test(str);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,7 +82,8 @@ For example:
 ------------------------------------------------------------------------------------------------ */
 
 const isNum = (input) => {
-  // Solution code here...
+  let pattern = /[0-9]/g;
+  return pattern.test(input);
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -103,7 +106,9 @@ Return an array containing all the matches.
 ------------------------------------------------------------------------------------------------ */
 
 const isCapitalized = (str) => {
-  // Solution code here...
+  let pattern = /[A-Z][a-zA-Z]*/g;
+  let result = str.match(pattern);
+  return result || [];
 };
 
 /* ------------------------------------------------------------------------------------------------
